@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Application\Core.API\Core.API.csproj" />
+    <ProjectReference Include="..\..\Crosscutting\Estalkei.Contracts\Estalkei.Contracts.csproj" />
+    <ProjectReference Include="..\..\Domain\Estalkei.Domain\Estalkei.Domain.csproj" />
+    <ProjectReference Include="..\..\Domain\Estalkei.Services\Estalkei.Services.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Estalkei.Data\Estalkei.Data.csproj" />
+  </ItemGroup>
+
+</Project>

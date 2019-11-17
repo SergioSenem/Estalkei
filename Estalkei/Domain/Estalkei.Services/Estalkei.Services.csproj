@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Domain\Core.Services\Core.Services.csproj" />
+    <ProjectReference Include="..\Estalkei.Domain\Estalkei.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
