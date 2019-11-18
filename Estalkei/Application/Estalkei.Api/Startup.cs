@@ -42,7 +42,7 @@ namespace Estalkei.Api
             services.AddScoped<IExchangeRepository, ExchangeRepository>();
             services.AddScoped<IExchangeProductRepository, ExchangeProductRepository>();
 
-            services.AddScoped<IContext, EstalkeiContext>();
+            services.AddSingleton<IContext, EstalkeiContext>();
 
             services.AddDbContext<EstalkeiContext>(options =>
             {
