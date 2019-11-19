@@ -1,5 +1,6 @@
 ﻿using Core.Contracts.Base;
 using System;
+using System.Collections.Generic;
 
 namespace Estalkei.Contracts.Dtos
 {
@@ -8,5 +9,6 @@ namespace Estalkei.Contracts.Dtos
         public int ExchangeTypeId { get; set; }
         public ExchangeTypeDto ExchangeType { get; set; }
         public DateTime Date { get; set; }
+        public IEnumerable<ExchangeProductDto> ExchangeProducts { get; set; }
     }
 }
