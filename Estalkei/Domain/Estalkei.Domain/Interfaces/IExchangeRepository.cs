@@ -5,5 +5,6 @@ namespace Estalkei.Domain.Interfaces
 {
     public interface IExchangeRepository : IRepositoryBase<Exchange>
     {
+        float GetMonthProfit(int month);
     }
 }

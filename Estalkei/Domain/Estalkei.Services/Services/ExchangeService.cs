@@ -33,9 +33,17 @@ namespace Estalkei.Services.Services
                 exchangeProduct.ExchangeId = entity.Id;
             }
 
-            ExchangeProductService.AddRange(newEntity.ExchangeProducts);
+            ExchangeProductService.AddRange(exchangeProducts);
 
             return entity;
+        }
+
+        public float GetMonthlyProfit(int month = 0)
+        {
+            if (month == 0)
+                month = DateTime.Now.Month;
+
+            return Repository.GetMonthProfit(month);
         }
     }
 }

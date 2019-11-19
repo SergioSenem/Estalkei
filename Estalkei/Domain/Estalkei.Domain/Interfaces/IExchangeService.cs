@@ -5,5 +5,6 @@ namespace Estalkei.Domain.Interfaces
 {
     public interface IExchangeService : IServiceBase<ExchangeDto>
     {
+        float GetMonthlyProfit(int month = 0);
     }
 }
