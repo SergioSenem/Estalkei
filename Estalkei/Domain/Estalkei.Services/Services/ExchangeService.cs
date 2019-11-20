@@ -31,6 +31,7 @@ namespace Estalkei.Services.Services
             foreach(var exchangeProduct in exchangeProducts)
             {
                 exchangeProduct.ExchangeId = entity.Id;
+                exchangeProduct.Exchange = entity;
             }
 
             ExchangeProductService.AddRange(exchangeProducts);
