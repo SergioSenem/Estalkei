@@ -8,5 +8,6 @@ namespace Estalkei.Domain.Interfaces
     {
         void UpdateQuantity(int productId, int exchangeQuantity, int type);
         void UpdateQuantities(IEnumerable<ExchangeProductDto> exchangeProducts);
+        IEnumerable<ProductDto> GetNotSoldInMonths(int months);
     }
 }

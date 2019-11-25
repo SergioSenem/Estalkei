@@ -49,5 +49,10 @@ namespace Estalkei.Services.Services
             Repository.UpdateRange(products);
             Repository.SaveChanges();
         }
+
+        public IEnumerable<ProductDto> GetNotSoldInMonths(int months)
+        {
+            return Mapper.Map<IEnumerable<ProductDto>>(Repository.GetNotSoldInMonths(months));
+        }
     }
 }

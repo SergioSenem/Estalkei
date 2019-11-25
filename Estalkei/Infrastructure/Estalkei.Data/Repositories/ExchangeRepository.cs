@@ -4,6 +4,7 @@ using Estalkei.Contracts.Enums;
 using Estalkei.Data.Contexts;
 using Estalkei.Domain.Entities;
 using Estalkei.Domain.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -36,6 +37,16 @@ namespace Estalkei.Data.Repositories
                             select ep.Quantity * p.SellPrice).Sum();
 
             return sells - expanses;
+        }
+
+        public DateTime GetProductLastExchange(int productId)
+        {
+            return (from e in DbSet
+                    join ep in Context.Set<ExchangeProduct>()
+                    on e.Id equals ep.ExchangeId
+                    where ep.ProductId == productId
+                    orderby e.Date descending
+                    select e.Date).FirstOrDefault();
         }
     }
 }
